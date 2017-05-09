@@ -96,3 +96,11 @@ print("The time after waiting is: ", final_answer)
 ```
 
 Perfect! Testing after each stage saved us time.
+
+### Tips for Debugging
+1. Everyone is a suspect (except Python!). Don't blame Python. It is more then likely you :(
+2. Find clues. There are 2 important clues to look for when debugging:
+    * Error messages
+    * Print statements
+
+
