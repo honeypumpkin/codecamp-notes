@@ -17,6 +17,11 @@ ie. forgetting a semicolon or closing a parens
 *example* 
 `print("Syntax errors are from missing bits)`
 
+#### Runtime Errors
+These are also called exceptions as they indicate something exceptional (bad) has happened.
+*example*
+`print(6 / 0)`
+
 
 
 
