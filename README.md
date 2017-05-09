@@ -44,7 +44,8 @@ Run your code as you are writing it - every 2 lines will help you isolate bugs a
 2. Keep it working 
 Once you have a working program, add small bits at a time to keep it working. If you introduce a bug you are able to isolate where it was added.
 
-__**Get something working and keep it working**__
+__**"Get something working and keep it working"**__
+-Said by someone really important I bet
 
 *example*
 ``` python
@@ -55,6 +56,7 @@ print(current_time)
 print(wait_time)
 ```
 This works great - let's add on...
+
 ``` python
 current_time = input("What is the current time (in hours 0 - 23)?")
 wait_time = input("How many hours do you want to wait")
@@ -65,7 +67,7 @@ print(wait_time)
 final_time = current_time + wait_time
 print(final_time)
 ```
-Uh oh. so now we are missing a way to make the numbers add correctly. Adding a type will help.
+Uh oh. So now we are missing a way to make the numbers add correctly. Converting to an integer will help.
 
 ``` python
 current_time_str = input("What is the current time (in hours 0-23)?")
@@ -93,4 +95,4 @@ final_answer = final_time_int % 24
 print("The time after waiting is: ", final_answer)
 ```
 
-
+Perfect! Testing after each stage saved us time.
