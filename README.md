@@ -142,3 +142,6 @@ Line 4 misspelled wait_time...
 
 ##### Finding clues
 An easy way is to use the cmd+F and find the different variable names. Often you will be looking at a line and if the variable doesn't hilight it has been misspelled.
+
+#### ValueError
+Value errors occur when you pass a parameter to a function and the function is expecting a certain type, but you pass it a different type. We can illustrate that with this particular program in two different ways.
