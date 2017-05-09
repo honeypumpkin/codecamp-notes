@@ -118,3 +118,27 @@ Many times, your code editor will tell you where the error is:
 ParseError: bad input on line 5
 ```
 However, this isn't always exactly right. Start at the line mentioned and work your way back.  
+
+##### Finding clues
+If you have trouble spotting the error a good place to start is to comment out the line mentioned in the error message.
+
+#### TypeError
+TypeErrors occur when you you try to combine two objects that are not compatible. For example you try to add together an integer and a string. Usually type errors can be isolated to lines that are using mathematical operators, and usually the line number given by the error message is an accurate indication of the line.
+
+#### NameError
+Name errors almost always mean that you have used a variable before it has a value. Often NameErrors are simply caused by typos in your code. They can be hard to spot if you don’t have a good eye for catching spelling mistakes. Other times you may simply mis-remember the name of a variable or even a function you want to call. 
+
+Can you spot the NameError?
+``` python
+str_time = input("What time is it now?")
+str_wait_time = input("What is the number of hours to wait?")
+time = int(str_time)
+wai_time = int(str_wait_time)
+
+time_when_alarm_go_off = time + wait_time
+print(time_when_alarm_go_off)
+```
+Line 4 misspelled wait_time... 
+
+##### Finding clues
+An easy way is to use the cmd+F and find the different variable names. Often you will be looking at a line and if the variable doesn't hilight it has been misspelled.
