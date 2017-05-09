@@ -39,9 +39,58 @@ we forgot to divide by 100 before having the percentage amount
 
 ### Avoid having to debug
 1. Start small
-
-... Run your code as you are writing it - every 2 lines will help you isolate bugs as they are introduced.
+Run your code as you are writing it - every 2 lines will help you isolate bugs as they are introduced.
 
 2. Keep it working 
+Once you have a working program, add small bits at a time to keep it working. If you introduce a bug you are able to isolate where it was added.
 
-... Once you have a working program, add small bits at a time to keep it working. If you introduce a bug you are able to isolate where it was added.
+__**Get something working and keep it working**__
+
+*example*
+``` python
+current_time = input("what is the current time (in hours)?")
+wait_time = input("How many hours do you want to wait")
+
+print(current_time)
+print(wait_time)
+```
+This works great - let's add on...
+``` python
+current_time = input("What is the current time (in hours 0 - 23)?")
+wait_time = input("How many hours do you want to wait")
+
+print(current_time)
+print(wait_time)
+
+final_time = current_time + wait_time
+print(final_time)
+```
+Uh oh. so now we are missing a way to make the numbers add correctly. Adding a type will help.
+
+``` python
+current_time_str = input("What is the current time (in hours 0-23)?")
+wait_time_str = input("How many hours do you want to wait")
+
+current_time_int = int(current_time_str)
+wait_time_int = int(wait_time_str)
+
+final_time_int = current_time_int + wait_time_int
+print(final_time_int)
+```
+Great! But testing out 13 gives the wrong answer. Need to add a modulo to account for the 0-23 hours...
+
+``` python
+current_time_str = input("What is the current time (in hours 0-23)?")
+wait_time_str = input("How many hours do you want to wait")
+
+current_time_int = int(current_time_str)
+wait_time_int = int(wait_time_str)
+
+final_time_int = current_time_int + wait_time_int
+
+final_answer = final_time_int % 24
+
+print("The time after waiting is: ", final_answer)
+```
+
+
