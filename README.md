@@ -103,4 +103,18 @@ Perfect! Testing after each stage saved us time.
     * Error messages
     * Print statements
 
+Four major error types:
+1. ParseError
+2. TypeError
+3. NameError
+4. ValueError
 
+#### ParseError
+A ParseError happens when you make an error of the syntax of your code. All ParseErrors are syntax errors, but not all syntax errors are ParseErrors.
+Usually ParseErrors can be traced back to missing punctuation characters such as commas, quotes, and parentheses.
+
+Many times, your code editor will tell you where the error is: 
+```
+ParseError: bad input on line 5
+```
+However, this isn't always exactly right. Start at the line mentioned and work your way back.  
