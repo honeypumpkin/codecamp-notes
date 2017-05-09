@@ -37,7 +37,11 @@ print("15% of 100 is " , percent)
 ```
 we forgot to divide by 100 before having the percentage amount
 
+### Avoid having to debug
+1. Start small
 
+... Run your code as you are writing it - every 2 lines will help you isolate bugs as they are introduced.
 
+2. Keep it working 
 
-
+... Once you have a working program, add small bits at a time to keep it working. If you introduce a bug you are able to isolate where it was added.
