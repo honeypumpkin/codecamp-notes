@@ -145,3 +145,8 @@ An easy way is to use the cmd+F and find the different variable names. Often you
 
 #### ValueError
 Value errors occur when you pass a parameter to a function and the function is expecting a certain type, but you pass it a different type. We can illustrate that with this particular program in two different ways.
+*example*
+``` python
+ValueError: invalid literal for int() with base 10: '' on line: 4
+```
+this error occured when a operator entered a value in the input that did not compute.
