@@ -155,12 +155,7 @@ for side in range(4)
     zack.left(90)
 ```
 
-
-
-
-
-
-
+![turtles.png](./img.png)
 
 
 
