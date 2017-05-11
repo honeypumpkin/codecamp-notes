@@ -176,6 +176,32 @@ print_num()
 * `num` is defined outside the function.
 * global variables can be pulled into the function, however function variables cannot be used outside of the function.
 
+### Shadowing
+What happens when we use the same name for a global varialbe and a local variable?
+```python
+num = 2
+def print_num(num):
+    print(num)
+
+print_num(3)
+```
+**Output:**  `3`
+
+Why? because it is referring to the function variable, not the global... however:
+``` python
+num = 2
+def print_num(num):
+    print(num)
+
+print_num(3)
+print(num)
+```
+adding `print(num)` will call the `global` variable.
+
+**Output:** `3`, `2`
+
+
+
 
 
 
