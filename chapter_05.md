@@ -200,6 +200,47 @@ adding `print(num)` will call the `global` variable.
 
 **Output:** `3`, `2`
 
+___
+## Chapter 5 studio
+![pretty picture](figs/tess08-1.png)
+
+Draw this pretty picture...
+```python
+import turtle
+
+def drawSquare(t, sz):
+    """draw 4squares"""
+    for i in range(4):
+        alex.forward(100)
+        alex.left(90)
+
+
+def drawGrid(t, sz):
+    """draw squares"""
+    for i in range(4):
+        drawSquare(alex, 100)
+        alex.right(90)
+        alex.forward(0)
+
+
+def turnSquares(n):
+    """turn the wheel"""
+    for i in range(n):
+        ang = 360/n
+        drawGrid(alex, n)
+        alex.right(ang)
+        
+        
+alex = turtle.Turtle()
+alex.color("white")
+alex.shape("circle")
+wn = turtle.Screen()
+wn.bgcolor("purple")
+alex.speed(0)
+
+turnSquares(7)
+```
+![Solution](figs/pretty.png)
 
 
 
