@@ -366,3 +366,49 @@ for nums in [12, 10, 32, 3, 66, 17, 42, 99, 20]:
 
 `The square of  20 is  400`
 
+
+### exercises
+13. 
+```python
+# import turtle
+import turtle
+
+# prompt user for number of legs
+num_legs = int(input("How many legs does your spider have?"))
+
+# calculate angle
+angle = 360/num_legs
+
+# create objects
+window = turtle.Screen()
+sprite = turtle.Turtle()
+sprite.speed(6)
+sprite.color("green")
+sprite.shape("turtle")
+
+
+
+#draw sprite
+for i in range(num_legs):
+    sprite.left(angle)
+    sprite.forward(90)
+    sprite.stamp()
+    sprite.forward(-90)
+
+#finish sprite
+sprite.stamp()
+
+#window exit on click
+window.exitonclick()
+```
+17. 
+``` python
+import math
+# find formula online?
+#355/113 = pi
+
+approx_pi = 355/113
+
+print(approx_pi)
+print(math.pi)
+```

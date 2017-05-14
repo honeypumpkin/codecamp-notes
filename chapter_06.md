@@ -50,7 +50,7 @@ For numbers (integers or floats) we can use **comparison operators** which evalu
 8 < 7 # False
 ```
 
-## Boolean jAlgebra
+## Boolean Algebra
 We can combine boolean values in wasy using `and`, `or` and `not` that match our natural language usage of combining different conditions.
 
 * Example 1:

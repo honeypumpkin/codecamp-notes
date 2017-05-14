@@ -243,6 +243,22 @@ turnSquares(7)
 ![Solution](figs/pretty.png)
 
 
+# Exercises
+
+11. 
+```python
+def sumTo(n):
+    # your code here
+    total_result = 0
+    for num in range(n+1):
+        total_result = total_result + num #can also write as 'total_result += num'
+        
+    return total_result
+
+print(sumTo(7))
+```
+Accumulator pattern - adds on to your list each time you go through.
+
 
 
 
