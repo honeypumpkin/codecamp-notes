@@ -74,6 +74,7 @@ In Python, every value is an object.
     ```
 * With LISTS even if the list is the same, a new object is made.
 
+## Split/Join
 
 
 

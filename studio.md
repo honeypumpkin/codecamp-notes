@@ -128,3 +128,28 @@ def is_sorted(string):
         else:
             return True
 ```
+
+# 10. counting Characters
+
+## Walkthrough
+
+Write a “gradebook” program that takes grade data for a student and prints the resulting GPA. The output should look something like this:
+``` python
+Your grade (0.0-4.0): 4
+# credits: 3
+Enter another grade? [y/n]: y
+Your grade (0.0-4.0): 4
+# credits: 2
+Enter another grade? [y/n]: n
+Your GPA is: 4.0
+```
+to calculate gpa:
+* GPA = QS/Total credits
+* QS = sume of each credit * score
+
+What to do ?
+
+1. going to need to create a list to hold grades
+1. 
+
+
