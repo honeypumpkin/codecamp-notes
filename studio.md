@@ -150,6 +150,71 @@ to calculate gpa:
 What to do ?
 
 1. going to need to create a list to hold grades
-1. 
+
+
+
+# studio 1.11
+## RECTANGLE
+
+A rectangle has a length and a width. A rectangle should be able to provide its area and perimeter. A rectangle can indicate whether it is smaller than another rectangle in terms of area. A rectangle can indicate whether it is in fact a square.
+
+first let's figure out what we need:
+### rectangles need:
+(should do this each time you are defining a class)
+
+> Properties
+* `length`: float
+* `width`: float
+
+> Methods
+* `__init__(self, length, width)`
+* `get_area()`
+* `get_perimiter()`
+* `is_smaller_than(Rectangle)`
+* `is_square()`
+
+### define the class:
+```python
+class Rectangle:
+
+    def __init__(self, length, width):
+        #building the object (constructor)—
+        #initializing values to have values 
+        #of what is passed in
+        self.length = length 
+        self.width = width
+
+    def get_area(self):
+        return self.length * self.width
+
+    def get_perimeter(self):
+        return 2 * (self.length + self.width)
+
+    def is_square(self):
+        return self.length == self.width
+
+    def is_smaller(self, rectangle):
+        area1 = self.get_area()
+        area2 = rectangle.get_area()
+        return area1 < area2
+
+
+class Square(Rectangle):
+    
+    def __init__((self, ))
+
+
+rect1 = Rectangle(2, 2) 
+#creating object called rect1 that is class Rectangle
+print("Area: ", rect1.get_area()) 
+#calls the object to run the get_area function
+print("Perimeter: ", rect1.get_perimeter())
+print("Is square: ", rect1.is_square())
+
+rect2 = Rectangle(2, 3)
+print(rect1.is_smaller_than(rect2))
+
+
+
 
 

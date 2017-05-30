@@ -1,31 +1,22 @@
-# lets build dictionaries that represent students at college
+# Need to know HOW to make an inheritance class, and how to use it.
 
-student1 = {
-    'first': 'Chris',
-    'last' : 'xx',
-    'id': 1234567,
-    'date_of_birth': '7/30/82',
-    'number_of_credits': 45,
-    'quality_score': 180
-}
+class Person:
 
-student2 = {
-    'first': 'Robin',
-    'last' : 'Avila',
-    'id': 9876543,
-    'date_of_birth': '12/07/71',
-    'number_of_credits': 55,
-    'quality_score': 108
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
 
-}
+    def __str__(self):
+        return first_name + ' ' + last_name
 
-
-class Student:
+class Student(Person):
     # data
     def __init__(self, first_name, last_name, student_id, quality_score=0, number_of_credits=0):
         #note that any parameter with a default value needs to be last in the list
-        self.first_name = first_name
-        self.last_name = last_name
+        
+        Person.__init__(self, first_name, last_name) #tells the class to initialize  the sub for info
+        #super().__init__(first_name, last_name)  can also use this
+
         self.student_id = student_id
         self.quality_score = quality_score
         self.number_of_credits = number_of_credits
@@ -51,6 +42,14 @@ class Student:
         object_string += ('GPA: ' + str(self.compute_gpa()))
         return object_string
 
+class Instructor(Person):
+    
+    def __init__(self, first_name, last_name, department, instructor_id):
+
+        Person.__init__(self, first_name, last_name)
+        
+        self.department = department
+        self.instructor_id = instructor_id
 
 class Course:
 
@@ -90,12 +89,5 @@ codecamp.enroll_students([dom, robin, carolyn])
 codecamp.print_roster()
 
 
-# objects
-chris = Student('Chris', 'Bay', 123456)
-chris.add_grade(4.0, 5)
-chris.add_grade(2, 3)
-chris.add_grade(3, 4)
-
-corey = Student('Corey', 'Lewis', 65432)
 
 

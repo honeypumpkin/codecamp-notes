@@ -180,13 +180,9 @@ print(x > 5 and x < 15)
 
 Your Answer:
 animal = input("What kind of animal would you like?")
-
 if animal == "lion":
-
     print("roar")
-
 else:
-
     print("this is not a lion")
 
 7. What is the output of this statement?
@@ -204,129 +200,66 @@ Your Answer:
 
 8. Write nested if statements that reflect the following:
 
-Variable: temperature
 
-Is Warm
-
-Is Cold
-
-
-Variable: rain
-
-Is Rainy
-
-Print Play in the Rain
-
-Print Stay Indoors
-
-Is Dry
-
-Print Go Swimming
-
-Print Layer Up
-
-Your Answer:
 def weather(x, y):
-
-if x == "Rainy":
-
-if y == "Warm":
-
-print("Play in the Rain")
-
-else:
-
-print("Stay Indoors")
-
-elif x == "Dry":
-
-if y == "Warm":
-
-print("Go Swimming")
-
-else:
-
-print("Layer Up")
-
- 
-
-print(weather(Dry, Warm))
+    if x == "Rainy":
+        if y == "Warm":
+            return("Play in the Rain")
+        else:
+            return("Stay Indoors")
+    elif x == "Dry":
+        if y == "Warm":
+            return("Go Swimming")
+        else:
+            return("Layer Up")
+print(weather("Rainy", "Warm"))
 
 9. Write if and else-if statements that reflect the following:
 
-Variable: animal
-
-Print
-
-lion
-
-roar
-
-sheep
-
-baaa
-
-cat
-
-meow
-
-none of the above (else)
-
-unknown
-
-Your Answer:
-animal = x
-
+VYour Answer:
+animal = "x"
 if animal == "lion":
-
     print("roar")
-
 elif animal == "sheep":
-
     print("baa")
-
 elif animal == "cat":
-
     print("meow")
-
 else:
-
     print("unknown")
 
-10. Using the following starter code, implement a while loop that adds 1 gallon of gas to the car’s tank as long as the gas level is below the capacity of the tank.  At the end of the loop, the car should have a full tank of gas. **WRONG**
+10. Using the following starter code, implement a while loop that adds 1 gallon of gas to the car’s tank as long as the gas level is below the capacity of the tank.  At the end of the loop, the car should have a full tank of gas. 
 
 car_fuel_capacity = 13
 gallons_pumped = 0
 gas_in_the_car = 4
 
-Your Answer:
-car_fuel_capacity = 13
-gallons_pumped = 0
-gas_in_the_car = 4
+while gas_in_the_car <= 13:
+    gas_in_the_car += 1
 
-while gas_in_the_car =< car_fuel_capacity:
-
-    gas_in_car = gas_in_car + 1 
-
-return gas_in_car
-
-gallons_pumped = gas_in_car - 4
+gallons_pumped = gas_in_the_car - 4
 
 print("You have pumped ", gallons_pumped, " to fill your tank to ", gas_in_the_car, ", which is equal to your capacity of ", car_fuel_capacity, ".")
 
-11. Under what circumstances might you use a while loop instead of a for loop? **WRONG**
+11. Under what circumstances might you use a while loop instead of a for loop? 
 
 Your Answer:
-When you need to iterate the loop for longer then just the string length (ie when you need the loop to reach a certain value), or when you need input from user to command loop to stop.
+The for loop is used to iterate over the elements of a sequence. It's used when you have a piece of code which you want to repeat 'n' number of times. 
+numbers = range(1,6)
+for count in numbers: #the loop will only go until the the end of the range of numbers
+    print (count)
 
-12. Given the variable below, print out the first and last initials of the name: **WRONG**
+The while loop tells the computer to do something as long as the condition is met. So if the condition continues to evaluate to 'True', the while loop will continue to run. 
+a = 0		
+while a < 10: #so as long as this is 'True', the loop will continue. It will stop when it is 'False'
+    a = a + 1	
+    print(a)
 
-username = “John Smith”
 
-Your Answer:
-username = “John Smith”
+12. Given the variable below, print out the first and last initials of the name: 
 
-print[0, 5]
+username = "John Smith"
+
+print(username[0] + username[5])
 
 13. Strings are immutable. Explain what this concept means.
 
