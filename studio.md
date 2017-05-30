@@ -198,10 +198,11 @@ class Rectangle:
         area2 = rectangle.get_area()
         return area1 < area2
 
-
+#extend class Rectangle to Square
 class Square(Rectangle):
     
-    def __init__((self, ))
+    def __init__(self, length):
+        Rectangle.__init__(self, length, length)
 
 
 rect1 = Rectangle(2, 2) 
@@ -213,6 +214,30 @@ print("Is square: ", rect1.is_square())
 
 rect2 = Rectangle(2, 3)
 print(rect1.is_smaller_than(rect2))
+
+square1 = Square(2)
+square2 = Square(5)
+print('square1 area', square1.get_area())
+print(square1.is_smaller(square2))
+```
+
+*output:*
+
+`Area:  4`
+
+`Perimeter:  8`
+
+`Is square:  True`
+
+`True`
+
+`square1 area 4`
+
+`True`
+
+___
+
+
 
 
 
