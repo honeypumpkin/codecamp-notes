@@ -238,8 +238,124 @@ print(square1.is_smaller(square2))
 ___
 
 
+## FRACTION
+A fraction has a numerator and denominator. A fraction should be able to add itself to another fraction, returning a new fraction that represents the sum. A fraction should be able to multiply itself by another fraction, returning a new fraction as the product. A fraction should be able to take the reciprocal of itself, returning that value as a new fraction. A fraction should be able to simplify itself, returning a new fraction as that simplification.
+
+### class needed:
+> Fraction
+### fractions need:
+> properties
+* `numerator`: float
+* `denominator`: float
+
+> methods
+* `__init__(self, numerator, denominator)`
+* `get_sum(self, Fraction)`
+* `get_product(self, Fraction)`
+* `get_value()`
+* `get_simplify()`
+
+```python
+class Fraction:
+
+    def __init__(self, top, bottom):
+        
+        self.numerator = top 
+        self.denominator = bottom
+
+    def __str__(self):
+        return str(self.numerator) + '/' + str(self.denominator)
+
+    def sum(self, other): #make sure you use variable different name then class
+        new_denominator = self.denominator * other.denominator
+        new_numerator = (self.numerator * other.denominator) + (self.denominator * other.numerator)
+        return Fraction(new_numerator, new_denominator)
+    
+    def multiply(self, other):
+        return
+    
+    def reciprocal(self):
+        return Fraction(self.denominator, self.numerator)
+
+    def simplify(self):
+        return
+
+
+    
+half1 = Fraction(1, 2)
+half2 = Fraction(2, 4)
+print(half1)
+print(half2)
+print(half1.sum(half2))
+```
+*output:*
+
+`1/2`
+
+`2/4`
+
+`8/8`
 
 
 
+
+
+## BASEBALLPLAYER
+
+A baseball player has a name and a jersey number. Most players hit either right or left, but some can hit either way. This object should be able to react when a player completes a game, recording how many hits and RBIs the player earned in that game. A player has a certain number of runs and RBIs he or she has recorded over all games played. A player has a certain number of games he or she has played.
+
+```python
+class BaseballPlayer:
+    
+    games_played = 0 #can put these here or below in __init__ as... 
+    hits = 0
+    rbis = 0
+    runs = 0
+       
+    def __init__(self, name, jersey_number, batting_stance): #(..., games_played=0)
+        
+        self.name = name
+        self.jersey_number = jersey_number
+        self.batting_stance = batting_stance
+        #self.games_played = games.played
+        
+        
+    def __str__(self):
+        #include name, jersey_number, rbis
+        return self.name + '(' + str(self.jersey_number) + ') - ' + str(self.rbis) + ' RBIs'
+    
+    
+    def print_stats(self):
+        print('Hits: ', self.hits)
+        print('RBIS=s: ', self.rbis)
+        print('Runs: ', self.runs)
+        print('Games played: ', self.games_played)
+    
+    def complete_game(self, rbis, runs, hits):
+
+        self.rbis += rbis
+        self.runs += runs
+        self.hits += hits
+        self.games_played += 1
+        
+        
+ozzie = BaseballPlayer('Ozzie Smith', 1, 'switch')
+ozzie.complete_game(1, 2, 1)
+ozzie.complete_game(0, 3, 1)
+
+print(ozzie)
+ozzie.print_stats()
+```
+*output:*
+
+`Ozzie Smith(1) - 1 RBIs`
+
+`Hits:  2`
+
+`RBIS=s:  1`
+
+`Runs:  5`
+
+`Games played:  2`
 
 

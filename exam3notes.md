@@ -121,3 +121,58 @@
 1. Explain how equality/sameness is in objects.
 1. Explain what is inheritance.
 1. Implement a super-sub class relationship.
+
+# Answers
+
+1. fruit = ['apple', 'banana', 'orange']
+2. items_for_sale = [['Ford', 'Honda'], ['Star Wars', 'Independence Day']]
+3. it would have to have 2 sub lists, or rather a sublist within another sublist.
+4. Why is the first print line False but the second print line is True? *3 of 6 points*
+```python
+x = ["a","b"]
+y = ["a","b"]
+print (x is y)
+print(x == y)
+```
+>Your Answer:
+>The `is` checks if both the variables point to the same object whereas the `==` sign checks if the values for the two variables are the same. Since lists are always seperate objects, x `is not` y, however since they have the same variables within the lists, x `==` y.
+
+
+5. True
+6. [81, 17, 83, 81, 17, 83]
+7. Suppose you have a list of items named cars that contains strings for “Ford”,”Honda”, and “Toyota”. Suppose you also have a list of items named planes that contains strings for “737” and “747”. Create a function that can take either list as an input parameter and print out each item in the list. Call the function for both lists. Your Answer:
+```python
+cars = ['Ford', 'Honda', 'Toyota']
+planes = ['737', '747']
+def functionx(list_name):
+    print(list_name)
+functionx(cars)
+functionx(planes)
+```
+8. Explain what a key-value pair is, and where you might use one in Python. *2 of 3 points* Your Answer:
+>a key-value pair is used in dictionaries in Python. it defines that the first variable x is the key and y is the value associated with that key. It is written dictionary1 = {'a':0, 'b':1} where the letters 'a' and 'b' are the keys and the numbers 0, 1 are the values.
+Key-value pairs are used in Python dictionaries. Each value of a dictionary is accessed by an unique “key”; so they are known as key-value pairs. Dictionaries are not sequences, so the order in which elements are added to the dictionary doesn’t matter.
+Example: D = {'food': 'pudding', 'quantity': 4, 'color': 'pink'}
+where in the dictionary `D`, food, quantity, and color are the keys and pudding, 4 and pink are the values.
+
+
+9. 1 & 4
+10. Explain the relationship between classes and objects. *1 of 3 points* Your Answer:
+
+>A class is a blueprint, or set of instructions and information. An object is an actual thing that is built from the class. For example: A blueprint for a house design is like a class description. All the houses built from that blueprint are objects of that class.
+
+
+11. What is inheritance and why is it a useful concept? *2 of 3 points* Your Answer:
+
+> Classes can inherit from other classes. A class can inherit attributes and behaviour methods from another class or parent class. A class which inherits from a parent class is called a subclass
+
+
+12. 
+```python
+def time_between_months(startingmonth, endingmonth):
+    months = {'January':1, 'February':2, 'March':3, 'April':4, 'May':5, 'June':6, 'July':7, 'August':8, 'September':9, 'October':10, 'November':11, 'December':12}
+    difference = months[endingmonth] - months[startingmonth]
+    return difference
+print(time_between_months('May', 'November'))
+
+
