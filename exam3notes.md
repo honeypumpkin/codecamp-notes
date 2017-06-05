@@ -126,7 +126,13 @@
 
 1. fruit = ['apple', 'banana', 'orange']
 2. items_for_sale = [['Ford', 'Honda'], ['Star Wars', 'Independence Day']]
-3. it would have to have 2 sub lists, or rather a sublist within another sublist.
+3. it would have to have 2 sub lists, or rather a sublist within another sublist. For example,
+```python
+exampleList = ["a", ["b", ["c", "d"]]]
+print(exampleList[1][1][1])
+```
+would return d
+
 4. Why is the first print line False but the second print line is True? *3 of 6 points*
 ```python
 x = ["a","b"]
@@ -144,8 +150,12 @@ print(x == y)
 ```python
 cars = ['Ford', 'Honda', 'Toyota']
 planes = ['737', '747']
+
+
 def functionx(list_name):
-    print(list_name)
+    for item in list_name:
+        print(item)
+        
 functionx(cars)
 functionx(planes)
 ```
